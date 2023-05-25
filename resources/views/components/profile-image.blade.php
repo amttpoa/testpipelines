@@ -1,0 +1,2 @@
+@props(['profile'])
+<img {{ $attributes->merge(['class' => 'rounded-full']) }} src="{{ Storage::disk('s3')->url('profiles/' . ($profile->image ? $profile->image : 'no-image.png')) }}" alt="{{ $profile->user->name}}">

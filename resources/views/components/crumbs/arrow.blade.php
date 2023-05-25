@@ -1,0 +1,1 @@
+<i class="fa-solid fa-angle-right text-sm"></i>

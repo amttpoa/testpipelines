@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose a {
+    @apply text-otgold;
+    @apply font-medium;
+    @apply no-underline;
+}
+
+@font-face {
+    font-family: "Blender";
+    src: url("/fonts/BlenderPro-Book.woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Blender";
+    src: url("/fonts/BlenderPro-Bold.woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Blender";
+    src: url("/fonts/BlenderPro-Heavy.woff2");
+    font-weight: 900;
+}
+
+.StripeElement {
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+    /* @apply bg-otblue; */
+    @apply py-2;
+    @apply px-2;
+    @apply rounded-md;
+    @apply shadow-sm;
+    @apply border;
+    @apply border-otblue-300;
+    @apply focus:border-otblue;
+    @apply focus:ring;
+    @apply focus:ring-otblue-100;
+    @apply placeholder:text-gray-400;
+}
+
+.StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+.prose li {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.prose li::marker {
+    color: #000;
+}
+
+/**************** checkbox and radio *****************************************************************/
+input[type="checkbox"],
+input[type="radio"] {
+    @apply text-otblue;
+    @apply border-otblue-300;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    @apply bg-otblue;
+}
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+    @apply bg-white;
+    @apply ring-otblue-200;
+}
+
+input[type="checkbox"]:checked:hover,
+input[type="checkbox"]:checked:focus,
+input[type="radio"]:checked:hover,
+input[type="radio"]:checked:focus {
+    @apply bg-otblue;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    @apply bg-otsteel;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    @apply text-otsteel;
+    @apply opacity-50;
+}
+
+/**************** sponsorships *****************************************************************/
+.sponsorships h2 {
+    @apply font-light;
+    @apply text-3xl;
+    @apply lg:text-5xl;
+    /* @apply text-otgray; */
+    @apply mb-5;
+    @apply -mx-6;
+    @apply px-6;
+    text-shadowx: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.sponsorships h2:not(:first-child) {
+    @apply border-t-8;
+    @apply border-otsteel;
+    @apply mt-10;
+    @apply pt-6;
+}
+.sponsorships table td {
+    @apply text-base;
+    @apply pl-0;
+}
+
+/**************** dollar http ******************************************************************************/
+.dollar {
+    position: relative;
+    line-height: 22px;
+}
+.dollar input {
+    padding-left: 18px;
+}
+.small.dollar input {
+    padding-left: 15px;
+}
+/* Chrome, Safari, Edge, Opera */
+.dollar input::-webkit-outer-spin-button,
+.dollar input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.dollar input[type="number"] {
+    -moz-appearance: textfield;
+}
+.dollar:before {
+    position: absolute;
+    top: 6px;
+    content: "$";
+    left: 5px;
+    font-size: 18px;
+    /* color: #81776c; */
+    @apply text-gray-500;
+}
+.small.dollar:before {
+    position: absolute;
+    top: 2px;
+    content: "$";
+    left: 4px;
+    font-size: 16px;
+    color: #81776c;
+}
+
+.tiny.dollar input {
+    padding-left: 13px;
+}
+.tiny.dollar:before {
+    position: absolute;
+    top: 0px;
+    content: "$";
+    left: 4px;
+    font-size: 14px;
+    color: #81776c;
+}
